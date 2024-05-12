@@ -5,7 +5,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  workflow_dispatch:
+  workflow_dispatch
 
 jobs:
   build:
@@ -31,3 +31,20 @@ jobs:
         EXPECTED_MAX: 7
         EXPECTED_SUM: 16
         EXPECTED_MULT: 168
+    
+
+    - name: Notify on success
+      if: success()
+      uses: appleboy/telegram-action@master
+      with:
+        to: 675829379
+        token: 6586894380:AAHTL-SSy8QkJ_HZnwAtFvWFHuDBaiaS6zw
+        message: "Tests passed successfully! 🎉"
+
+    - name: Notify on failure
+      if: failure()
+      uses: appleboy/telegram-action@master
+      with:
+        to: 675829379
+        token: 6586894380:AAHTL-SSy8QkJ_HZnwAtFvWFHuDBaiaS6zw
+        message: "Tests failed! ❌"
