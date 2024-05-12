@@ -5,7 +5,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  workflow_dispatch
+  workflow_dispatch:
 
 jobs:
   build:
@@ -31,7 +31,6 @@ jobs:
         EXPECTED_MAX: 7
         EXPECTED_SUM: 16
         EXPECTED_MULT: 168
-    
 
     - name: Notify on success
       if: success()
