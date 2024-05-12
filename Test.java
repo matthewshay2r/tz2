@@ -6,15 +6,12 @@ public class Test {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Считываем правильные ответы с клавиатуры
-        System.out.println("Введите ожидаемый результат для минимума:");
-        int expectedMin = scanner.nextInt();
-        System.out.println("Введите ожидаемый результат для максимума:");
-        int expectedMax = scanner.nextInt();
-        System.out.println("Введите ожидаемый результат для суммы:");
-        int expectedSum = scanner.nextInt();
-        System.out.println("Введите ожидаемый результат для произведения:");
-        long expectedMult = scanner.nextLong();
+
+        int expectedMin = Integer.parseInt(System.getenv("EXPECTED_MIN"));
+        int expectedMax = Integer.parseInt(System.getenv("EXPECTED_MAX"));
+        int expectedSum = Integer.parseInt(System.getenv("EXPECTED_SUM"));
+        long expectedMult = Long.parseLong(System.getenv("EXPECTED_MULT"));
+
 
         String fileName = "data.txt";
         try {
