@@ -24,7 +24,7 @@ jobs:
     - name: Run tests
       run: |
         javac *.java
-        java Test
+        java -DEXT_MIN=$EXPECTED_MIN -DEXT_MAX=$EXPECTED_MAX -DEXT_SUM=$EXPECTED_SUM -DEXT_MULT=$EXPECTED_MULT Test
       env:
         EXPECTED_MIN: 2
         EXPECTED_MAX: 7
