@@ -1,5 +1,6 @@
 # Техническое задание №2 (ТЗ2)
-![example workflow](https://github.com/github/docs/actions/workflows/ci-java.yml/badge.svg)
+![Java CI](https://github.com/matthewshay2r/tz2/actions/workflows/java-ci.yml/badge.svg)
+
 
 ## Описание проекта
 Данный проект реализует функции, описанные в Техническом задании №2 (ТЗ2). Он состоит из трех основных компонентов:
